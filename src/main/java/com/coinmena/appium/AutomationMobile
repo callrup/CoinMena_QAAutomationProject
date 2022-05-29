@@ -38,7 +38,29 @@ public class AutomationMobile {
 		} 
 	}
 	
-	public WebElement scrollToAnElementByText(AppiumDriver<WebElement> driver, String text) {
+public static AndroidElement scrollToElement(By by,AndroidDriver driver) {
+		AndroidElement element = null;
+		int numberOfTimes = 10;
+		Dimension size = driver.manage().window().getSize();
+		int anchor = (int)(size.width / 2);
+		//Swipe up to scroll down
+		int startPoint = (int)(size.height - 10);
+		int endPoint = 10;
+
+		for (int i = 0; i < numberOfTimes; i++) {
+		try {
+		new TouchAction(driver)
+		.longPress(PointOption.point(anchor, startPoint)) //.press(point(anchor, startPoint)) if used press need proper waiting time
+		//.waitAction(waitOptions(ofMillis(miliseconds)))
+		.moveTo(PointOption.point(anchor, endPoint)).release().perform();
+		element = (AndroidElement) driver.findElement(by);
+		i = numberOfTimes;
+		} catch (NoSuchElementException ex) {
+		System.out.println(String.format("Element not available. Scrolling (%s) times…", i + 1));
+		}
+		}
+		return element;
+		}	public WebElement scrollToAnElementByText(AppiumDriver<WebElement> driver, String text) {
         return driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector())" +
                 ".scrollIntoView(new UiSelector().text(\"" + text + "\"));"));
 }
