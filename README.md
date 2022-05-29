@@ -1,9 +1,9 @@
 # CoinMena SeleniumMaven-PageObject
-Assignment automate some test cases On "demoblaze" with Selenium_Maven Using PageObject
+Assignment automate some test cases On http://automationpractice.com/ with Selenium_Maven Using PageObject
 
 # Test Cases & Defect Report is kept inside Test Doc Folder
 
-# Following project is used as an interview evaluation tool. It consists of a common web UI test automation stack:
+# Following project  consists of a common web UI test automation stack:
 
 Java 8
 Selenium 3.141.59
