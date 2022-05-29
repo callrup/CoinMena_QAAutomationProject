@@ -38,6 +38,6 @@ public abstract class BaseTestClass {
     @AfterSuite(alwaysRun = true)
     void tearDownTest() {
     	header.clickOnLogout();
-        //WebDriverFactory.stopDriver();
+        WebDriverFactory.stopDriver();
     }
 }

@@ -32,7 +32,7 @@ public abstract class Page {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
-
+    
     protected void sendText(WebElement element, String text) {
         visibilityWait(element);
         element.clear();

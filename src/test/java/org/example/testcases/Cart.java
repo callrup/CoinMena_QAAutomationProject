@@ -24,7 +24,6 @@ public class Cart extends BaseTestClass {
        softAssert.assertEquals(cartPage.productAddedToCartMessage(),PropertyReader.getAlertMessage("ADD.CART"));
        softAssert.assertEquals(cartPage.verifyBlueMediumSizeAdded(),PropertyReader.getAlertMessage("CART.ATTRIBUTE"));
        softAssert.assertEquals(cartPage.verifyQuantityIsTwo(), PropertyReader.getAlertMessage("CART.QUANTITY"));
-       //softAssert.assertEquals(cartPage.getTotalPrice(), cartPage.getTotalExpectedprice(),0.00);
        cartPage.clickOnPlaceOrder();
     }
     

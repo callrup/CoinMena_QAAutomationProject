@@ -30,6 +30,7 @@ public class Login extends BaseTestClass {
     public void validLogin() {
         loginPage.login(PropertyReader.getData("USERNAME"), PropertyReader.getData("PASSWORD"));
         softAssert.assertEquals(loginPage.getLoginSuccessMessage(), PropertyReader.getAlertMessage("VALID.LOGIN"));
+        softAssert.assertEquals(driver.getTitle(), PropertyReader.getAlertMessage("LOGIN.PAGE"));
         softAssert.assertAll();
     }
   
