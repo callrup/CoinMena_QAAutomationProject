@@ -1,5 +1,5 @@
 # CoinMena SeleniumMaven-PageObject
-Assignment automate some test cases On "demoblaze" with Selenium_Maven Using PageObject
+Assignment automate some test cases On http://automationpractice.com/ with Selenium_Maven Using PageObject
 
 # Test Cases & Defect Report is kept inside Test Doc Folder
 
